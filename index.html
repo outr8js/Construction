@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoCal GC Estimator | LA & Orange County Construction Pricing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4M5 21V10.85M19 21V10.85M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>SoCal GC Estimator</h1>
+                        <span class="tagline">LA & Orange County Pricing 2024-2025</span>
+                    </div>
+                </div>
+                <div class="county-toggle">
+                    <button class="county-btn active" data-county="la">Los Angeles</button>
+                    <button class="county-btn" data-county="oc">Orange County</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Job Selection Panel -->
+            <section class="job-selection">
+                <div class="section-header">
+                    <h2>Select Job Type</h2>
+                    <div class="search-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        <input type="text" id="job-search" placeholder="Search jobs...">
+                    </div>
+                </div>
+
+                <div class="job-categories" id="job-categories">
+                    <!-- Categories will be populated by JS -->
+                </div>
+            </section>
+
+            <!-- Estimate Panel -->
+            <section class="estimate-panel" id="estimate-panel">
+                <div class="panel-placeholder">
+                    <div class="placeholder-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3>Select a job type to get started</h3>
+                    <p>Choose from the categories on the left, or search for a specific job</p>
+                </div>
+
+                <div class="estimate-content hidden" id="estimate-content">
+                    <!-- Dynamic content -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Pricing data sourced from 2024-2025 market research. Estimates are approximate and may vary based on specific project requirements.</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
